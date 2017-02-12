@@ -1,0 +1,5 @@
+Version 3 - 22.8.2013
+	- Version that is working in the Cache "Geocache on the Rocks"
+
+Version 3.1 - 5.10.2013
+       - new flag for switching between Celsius and Fahrenheit in EEPROM
