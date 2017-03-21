@@ -13,7 +13,7 @@ const char show_string[] = "N 44# 43.541  W 63# 44.270    ";
 #define TEMP_THRESH 4.0 // degrees Celcius
 // END OF CHANGE *********************************************************
 
-#define VERSION "Version 3.3" 
+#define VERSION "Version 3.4" 
 
 uint8_t celcius[1] EEMEM; // flag for celcius or fahrenheit (default celcius = 0xFF)
 uint8_t coords[30] EEMEM; // coord string - will be loaded from default show_string
@@ -637,7 +637,7 @@ float readTemp(void)
 // watchdog resets. 
 // Note: The ordinary bootloader appears to be too slow at least when running
 // at 8MHz. It creates endless watch-dog reset loops!
-void wdt_init(void) __attribute__((naked)) __attribute__((section(".init3")));
+void wdt_init(void) __attribute__((naked)) __attribute__((section(".init3"))) __attribute__((used));
 void wdt_init(void)
 {
   MCUSR = 0;
